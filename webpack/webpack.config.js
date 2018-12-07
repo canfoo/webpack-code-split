@@ -56,6 +56,10 @@ module.exports = env => {
             ]
             : ExtractTextPlugin.extract({ fallback: 'style-loader', loader: 'css-loader?minimize&-autoprefixer!postcss-loader!sass-loader' }),
         },
+        {
+          test: /\.md$/,
+          loader : 'raw-loader'
+        }
       ],
     },
 
