@@ -14,7 +14,7 @@
   "author": "Dennis Brotzky <brotzky@gmail.com>",
   "homepage": "https://github.com/brotzky/code-splitting",
   "dependencies": {
-    "doc-react": "^0.0.3",
+    "doc-react": "^0.0.5",
     "rc-tooltip": "^3.7.3",
     "react": "15.4.2",
     "react-dom": "15.4.2",
