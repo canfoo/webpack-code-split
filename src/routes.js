@@ -37,7 +37,23 @@ export default {
     {
       path: 'add',
       getComponent(location, cb) {
-        System.import(/* webpackChunkName: "add-chunk" */ './components/add')
+        System.import(/* webpackChunkName: "add-chunk" */ './components/Add')
+          .then(loadRoute(cb))
+          .catch(errorLoading);
+      },
+    },
+    {
+      path: 'doc',
+      getComponent(location, cb) {
+        System.import(/* webpackChunkName: "doc-chunk" */ './components/Doc')
+          .then(loadRoute(cb))
+          .catch(errorLoading);
+      },
+    },
+    {
+      path: 'custom',
+      getComponent(location, cb) {
+        System.import(/* webpackChunkName: "custom-chunk" */ './components/Custom')
           .then(loadRoute(cb))
           .catch(errorLoading);
       },

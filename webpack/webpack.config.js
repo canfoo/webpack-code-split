@@ -27,10 +27,10 @@ module.exports = env => {
      *   the root of this prject.
      */
     output: {
-      filename: '[name].js',
+      filename: '[name].[hash].js',
       path: path.join(__dirname, '../build/'),
       // publicPath: '/', can uncomment if you want everything relative to root '/'
-      chunkFilename:'[name].js'
+      chunkFilename:'[name].[chunkhash].js'
     },
 
     module: {

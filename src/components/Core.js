@@ -12,6 +12,8 @@ const Core = ({ children }) =>
     <nav>
       <Link to='/'>Home</Link>
       <Link to='/add'>Add</Link>
+      <Link to='/doc'>Doc</Link>
+      <Link to='/custom'>Custom</Link>
     </nav>
     <main>
       { children }

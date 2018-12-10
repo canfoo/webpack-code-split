@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + ({"add-chunk":"add-chunk","home-chunk":"home-chunk"}[chunkId]||chunkId) + ".js";
+/******/ 		script.src = __webpack_require__.p + "" + ({"add-chunk":"add-chunk","custom-chunk":"custom-chunk","home-chunk":"home-chunk"}[chunkId]||chunkId) + "." + {"add-chunk":"e8851cd2977f33c8ec0e","custom-chunk":"596d9eb6cd3493781731","home-chunk":"365053b46ace8dcc94eb"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -10975,6 +10975,11 @@ var Core = function Core(_ref) {
         _Link2.default,
         { to: '/add' },
         'Add'
+      ),
+      _react2.default.createElement(
+        _Link2.default,
+        { to: '/custom' },
+        'Custom'
       )
     ),
     _react2.default.createElement(
@@ -19216,34 +19221,14 @@ exports.default = {
   childRoutes: [{
     path: 'add',
     getComponent: function getComponent(location, cb) {
-      __webpack_require__.e/* import() */("add-chunk").then(__webpack_require__.bind(null, "QpwF")).then(loadRoute(cb)).catch(errorLoading);
+      __webpack_require__.e/* import() */("add-chunk").then(__webpack_require__.bind(null, "6H2U")).then(loadRoute(cb)).catch(errorLoading);
     }
-  },
-  // {
-  //   path: 'about',
-  //   getComponent(location, cb) {
-  //     System.import(/* webpackChunkName: "about-chunk" */ './components/About')
-  //       .then(loadRoute(cb))
-  //       .catch(errorLoading);
-  //   },
-  // },
-  // {
-  //   path: 'users',
-  //   getComponent(location, cb) {
-  //     System.import(/* webpackChunkName: "users-chunk" */ './components/Users')
-  //       .then(loadRoute(cb))
-  //       .catch(errorLoading);
-  //   },
-  // },
-  // {
-  //   path: 'doc',
-  //   getComponent(location, cb) {
-  //     System.import(/* webpackChunkName: "doc-chunk" */ './components/Doc')
-  //       .then(loadRoute(cb))
-  //       .catch(errorLoading);
-  //   },
-  // },
-  {
+  }, {
+    path: 'custom',
+    getComponent: function getComponent(location, cb) {
+      __webpack_require__.e/* import() */("custom-chunk").then(__webpack_require__.bind(null, "5x/d")).then(loadRoute(cb)).catch(errorLoading);
+    }
+  }, {
     path: '*',
     getComponent: function getComponent(location, cb) {
       __webpack_require__.e/* import() */("home-chunk").then(__webpack_require__.bind(null, "LFH0")).then(loadRoute(cb)).catch(errorLoading);

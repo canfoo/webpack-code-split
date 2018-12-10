@@ -1,5 +1,47 @@
 webpackJsonp(["add-chunk"],{
 
+/***/ "6H2U":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__("cqTL");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactLoading = __webpack_require__("BuHj");
+
+var _reactLoading2 = _interopRequireDefault(_reactLoading);
+
+var _docReact = __webpack_require__("Xzka");
+
+var _docReact2 = _interopRequireDefault(_docReact);
+
+var _reactLoading3 = __webpack_require__("Gt9t");
+
+var _reactLoading4 = _interopRequireDefault(_reactLoading3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Doc = (0, _docReact2.default)({ ReactLoading: _reactLoading2.default }, _reactLoading4.default);
+
+var Add = function Add() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(Doc, null)
+  );
+};
+
+exports.default = Add;
+
+/***/ }),
+
 /***/ "BuHj":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2854,48 +2896,6 @@ module.exports = "<svg id=\"loading\" xmlns=\"http://www.w3.org/2000/svg\" viewB
 /***/ (function(module, exports) {
 
 module.exports = "### 测试一下啊\n\n### 基础用法\n\n:::demo 基础用法。。。\n\n```js\n\nclass Test extends Component {\n  render() {\n    return (\n      <div>\n        <ReactLoading color={'#333'} height={267} width={375} />\n      </div>\n    )\n  }\n}\n\n```\n:::"
-
-/***/ }),
-
-/***/ "QpwF":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__("cqTL");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactLoading = __webpack_require__("BuHj");
-
-var _reactLoading2 = _interopRequireDefault(_reactLoading);
-
-var _docReact = __webpack_require__("Xzka");
-
-var _docReact2 = _interopRequireDefault(_docReact);
-
-var _reactLoading3 = __webpack_require__("Gt9t");
-
-var _reactLoading4 = _interopRequireDefault(_reactLoading3);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Doc = (0, _docReact2.default)({ ReactLoading: _reactLoading2.default }, _reactLoading4.default);
-
-var Add = function Add() {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(Doc, null)
-  );
-};
-
-exports.default = Add;
 
 /***/ }),
 
