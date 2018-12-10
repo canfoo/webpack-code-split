@@ -1,6 +1,6 @@
-webpackJsonp([0],{
+webpackJsonp(["home-chunk"],{
 
-/***/ 227:
+/***/ "LFH0":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(13);
+var _react = __webpack_require__("cqTL");
 
 var _react2 = _interopRequireDefault(_react);
 

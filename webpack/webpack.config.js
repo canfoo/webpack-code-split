@@ -86,6 +86,14 @@ module.exports = env => {
       ifProd(new ExtractTextPlugin({
         filename: '[name].[hash].css',
       })),
+      ifProd(new webpack.HashedModuleIdsPlugin()),
+      ifProd(new webpack.NamedChunksPlugin((chunk) => {
+        // 解决异步模块打包的问题
+        if (chunk.name) {
+          return chunk.name;
+        }
+        return chunk.modules.map(m => path.relative(m.context, m.request)).join("_");
+      }))
       // ifProd(new webpack.optimize.UglifyJsPlugin({
       //   compress: {
       //     'screw_ie8': true,

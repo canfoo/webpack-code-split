@@ -35,29 +35,37 @@ export default {
   },
   childRoutes: [
     {
-      path: 'about',
+      path: 'add',
       getComponent(location, cb) {
-        System.import(/* webpackChunkName: "about-chunk" */ './components/About')
+        System.import(/* webpackChunkName: "add-chunk" */ './components/add')
           .then(loadRoute(cb))
           .catch(errorLoading);
       },
     },
-    {
-      path: 'users',
-      getComponent(location, cb) {
-        System.import(/* webpackChunkName: "users-chunk" */ './components/Users')
-          .then(loadRoute(cb))
-          .catch(errorLoading);
-      },
-    },
-    {
-      path: 'doc',
-      getComponent(location, cb) {
-        System.import(/* webpackChunkName: "doc-chunk" */ './components/Doc')
-          .then(loadRoute(cb))
-          .catch(errorLoading);
-      },
-    },
+    // {
+    //   path: 'about',
+    //   getComponent(location, cb) {
+    //     System.import(/* webpackChunkName: "about-chunk" */ './components/About')
+    //       .then(loadRoute(cb))
+    //       .catch(errorLoading);
+    //   },
+    // },
+    // {
+    //   path: 'users',
+    //   getComponent(location, cb) {
+    //     System.import(/* webpackChunkName: "users-chunk" */ './components/Users')
+    //       .then(loadRoute(cb))
+    //       .catch(errorLoading);
+    //   },
+    // },
+    // {
+    //   path: 'doc',
+    //   getComponent(location, cb) {
+    //     System.import(/* webpackChunkName: "doc-chunk" */ './components/Doc')
+    //       .then(loadRoute(cb))
+    //       .catch(errorLoading);
+    //   },
+    // },
     {
       path: '*',
       getComponent(location, cb) {
