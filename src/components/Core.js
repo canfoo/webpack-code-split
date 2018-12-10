@@ -13,6 +13,7 @@ const Core = ({ children }) =>
       <Link to='/'>Home</Link>
       <Link to='/about'>About</Link>
       <Link to='/users'>Users</Link>
+      <Link to='/doc'>Doc</Link>
     </nav>
     <main>
       { children }

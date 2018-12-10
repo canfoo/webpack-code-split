@@ -51,6 +51,14 @@ export default {
       },
     },
     {
+      path: 'doc',
+      getComponent(location, cb) {
+        System.import(/* webpackChunkName: "doc-chunk" */ './components/Doc')
+          .then(loadRoute(cb))
+          .catch(errorLoading);
+      },
+    },
+    {
       path: '*',
       getComponent(location, cb) {
         System.import(/* webpackChunkName: "home-chunk" */ './components/Home')
