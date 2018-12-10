@@ -11,9 +11,6 @@ const Core = ({ children }) =>
   <div className="core">
     <nav>
       <Link to='/'>Home</Link>
-      {/* <Link to='/about'>About</Link>
-      <Link to='/users'>Users</Link>
-      <Link to='/doc'>Doc</Link> */}
       <Link to='/add'>Add</Link>
     </nav>
     <main>

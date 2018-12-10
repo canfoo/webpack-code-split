@@ -42,30 +42,6 @@ export default {
           .catch(errorLoading);
       },
     },
-    // {
-    //   path: 'about',
-    //   getComponent(location, cb) {
-    //     System.import(/* webpackChunkName: "about-chunk" */ './components/About')
-    //       .then(loadRoute(cb))
-    //       .catch(errorLoading);
-    //   },
-    // },
-    // {
-    //   path: 'users',
-    //   getComponent(location, cb) {
-    //     System.import(/* webpackChunkName: "users-chunk" */ './components/Users')
-    //       .then(loadRoute(cb))
-    //       .catch(errorLoading);
-    //   },
-    // },
-    // {
-    //   path: 'doc',
-    //   getComponent(location, cb) {
-    //     System.import(/* webpackChunkName: "doc-chunk" */ './components/Doc')
-    //       .then(loadRoute(cb))
-    //       .catch(errorLoading);
-    //   },
-    // },
     {
       path: '*',
       getComponent(location, cb) {
