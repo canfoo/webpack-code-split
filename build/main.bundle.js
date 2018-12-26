@@ -156,15 +156,17 @@
 
 
 // main.js
-// const world = require('./world');
 
-__webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 1)).then(function (world) {
-  function app() {
-    console.log('hello word');
-  }
-  app();
-  world();
-});
+function app() {
+  console.log('hello word');
+}
+app();
+
+setTimeout(function () {
+  __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 1)).then(function (world) {
+    world();
+  });
+}, 3000); // 延迟3s异步加载world.js
 
 /***/ })
 /******/ ]);
