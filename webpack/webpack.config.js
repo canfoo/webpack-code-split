@@ -15,8 +15,7 @@ module.exports = env => {
      * In this case we have both an app and vendor file.
      */
     entry: {
-      app: path.join(__dirname, '../src/'),
-      vendor: ['react', 'react-dom', 'react-router'],
+      app: path.join(__dirname, '../src/')
     },
     /**
      * output tells webpack where to put the files he creates
@@ -27,10 +26,10 @@ module.exports = env => {
      *   the root of this prject.
      */
     output: {
-      filename: '[name].[hash].js',
+      filename: '[name].js',
       path: path.join(__dirname, '../build/'),
       // publicPath: '/', can uncomment if you want everything relative to root '/'
-      chunkFilename:'[name].[chunkhash].js'
+      chunkFilename:'[name].js'
     },
 
     module: {
@@ -64,48 +63,24 @@ module.exports = env => {
     },
 
     plugins: removeEmpty([
-      /**
-      * HtmlWebpackPlugin will make sure out JavaScriot files are being called
-      * from within our index.html
-      */
       new HtmlWebpackPlugin({
         template: path.join(__dirname, '../src/index.html'),
         filename: 'index.html',
         inject: 'body',
       }),
-      new webpack.LoaderOptionsPlugin({
-        minimize: env.prod, // mimimize true in production
-        debug: env.dev, // debug true in development
-        options: {
-          context: __dirname,
-          postcss: [Autoprefixer({ browsers: ['last 3 versions'] })],
-        },
-      }),
 
-      // Only running ExtractTextPlugin() and UglifyJsPlugin() in production
-      ifProd(new ExtractTextPlugin({
-        filename: '[name].[hash].css',
-      })),
-      ifProd(new webpack.HashedModuleIdsPlugin()),
-      ifProd(new webpack.NamedChunksPlugin((chunk) => {
-        // 解决异步模块打包的问题
-        if (chunk.name) {
-          return chunk.name;
-        }
-        return chunk.modules.map(m => path.relative(m.context, m.request)).join("_");
-      }))
-      // ifProd(new webpack.optimize.UglifyJsPlugin({
-      //   compress: {
-      //     'screw_ie8': true,
-      //     'warnings': false,
-      //     'unused': true,
-      //     'dead_code': true,
-      //   },
-      //   output: {
-      //     comments: false,
-      //   },
-      //   sourceMap: false,
-      // })),
+      // ifProd(
+      //   new webpack.optimize.CommonsChunkPlugin({
+      //     name: 'vendor',
+      //     minChunks (module) {
+      //       console.log('module.resource', module.resource, /world\.js$/.test(module.resource))
+      //       if (/world\.js$/.test(module.resource)) {
+      //         return true
+      //       }
+      //       return false;
+      //     }
+      //   })
+      // )
     ]),
   };
 };

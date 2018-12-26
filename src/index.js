@@ -1,8 +1,12 @@
-import React from 'react';
-import { render } from 'react-dom';
-import Root from './root';
+// main.js
+// const world = require('./world');
 
-import './styles/index.scss';
+System.import(/* webpackChunkName: "world-chunk" */ './world').then(world => {
+  function app() {
+    console.log('hello word')  
+  }
+  app();
+  world();
+})
 
-// rendering the Root component into <div id="App"></div>
-render(<Root />, document.getElementById('App'));
+
