@@ -15,7 +15,7 @@ module.exports = env => {
      * In this case we have both an app and vendor file.
      */
     entry: {
-      app: path.join(__dirname, '../src/')
+      main: path.join(__dirname, '../src/')
     },
     /**
      * output tells webpack where to put the files he creates
@@ -26,7 +26,7 @@ module.exports = env => {
      *   the root of this prject.
      */
     output: {
-      filename: 'main.bundle.js',
+      filename: '[name].bundle.js',
       path: path.join(__dirname, '../build/'),
       // publicPath: '/', can uncomment if you want everything relative to root '/'
       chunkFilename:'[name].js'
@@ -69,18 +69,17 @@ module.exports = env => {
         inject: 'body',
       }),
 
-      // ifProd(
-      //   new webpack.optimize.CommonsChunkPlugin({
-      //     name: 'vendor',
-      //     minChunks (module) {
-      //       console.log('module.resource', module.resource, /world\.js$/.test(module.resource))
-      //       if (/world\.js$/.test(module.resource)) {
-      //         return true
-      //       }
-      //       return false;
-      //     }
-      //   })
-      // )
+      ifProd(
+        new webpack.optimize.CommonsChunkPlugin({
+          name: 'vendor',
+          minChunks (module) {
+            if (/world\.js$/.test(module.resource)) {
+              return true
+            }
+            return false;
+          }
+        })
+      )
     ]),
   };
 };
