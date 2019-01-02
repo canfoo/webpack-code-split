@@ -86,7 +86,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + ({"0":"world-chunk","2": "hello-chunk"}[chunkId]||chunkId) + ".js";
+/******/ 		script.src = __webpack_require__.p + "" + ({"0":"world-chunk","100": "hello-chunk"}[chunkId]||chunkId) + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -167,7 +167,7 @@ setTimeout(function () {
     world();
   });
 
-  __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 2)).then(function (world) {
+  __webpack_require__.e/* import() */(100).then(__webpack_require__.bind(null, 2)).then(function (world) {
     world();
   });
 
