@@ -70,15 +70,15 @@ module.exports = env => {
       }),
 
       ifProd(
-new webpack.optimize.CommonsChunkPlugin({
-  name: 'vendor',
-  minChunks (module) {
-    if (/world\.js$/.test(module.resource)) {
-      return true
-    }
-    return false;
-  }
-})
+// new webpack.optimize.CommonsChunkPlugin({
+//   name: 'vendor',
+//   minChunks (module) {
+//     if (/world\.js$/.test(module.resource)) {
+//       return true
+//     }
+//     return false;
+//   }
+// })
       )
     ]),
   };
